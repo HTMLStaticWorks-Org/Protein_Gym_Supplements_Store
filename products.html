@@ -237,7 +237,7 @@
               <!-- Sort Dropdown -->
               <div class="d-flex align-items-center gap-2">
                 <label for="catalogSortSelect" class="small text-muted-custom mb-0 text-nowrap">Sort By:</label>
-                <select id="catalogSortSelect" class="form-select form-select-sm bg-secondary-custom text-white border-secondary" style="border-radius: var(--radius-sm); font-family: var(--font-display); font-weight: 700;">
+                <select id="catalogSortSelect" class="form-select form-select-sm bg-secondary-custom text-adaptive border" style="border-radius: var(--radius-sm); border-color: var(--border-color) !important; font-family: var(--font-display); font-weight: 700;">
                   <option value="featured">Featured / Bestselling</option>
                   <option value="price-low">Price: Low to High</option>
                   <option value="price-high">Price: High to Low</option>
@@ -440,6 +440,13 @@
       </div>
     </div>
   </div>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to Top" title="Back to Top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

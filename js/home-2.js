@@ -39,14 +39,14 @@ const HERO_BRAND_DATA = {
   'Optimum Nutrition': {
     title: 'OPTIMUM NUTRITION',
     desc: 'The benchmark of gold-standard whey isolates and mass gainers since 1986.',
-    image: 'im/nutraseller-manufacturing-OaCmHesHp8M-unsplash.jpg',
+    image: 'im/andrey-khoviakov-L5gVuzoP8DU-unsplash.jpg',
     stat: '24G Protein',
     badge: 'World #1 Whey'
   },
   'Dymatize': {
     title: 'DYMATIZE NUTRITION',
     desc: 'Pioneers in hydrolyzed microfiltered ISO100 with near-zero fat and lactose.',
-    image: 'im/andrey-khoviakov-L5gVuzoP8DU-unsplash.jpg',
+    image: 'im/pexels-andres-ayrton-6551145.jpg',
     stat: 'Hydrolyzed WPI',
     badge: 'Fast Digestion'
   },

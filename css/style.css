@@ -646,20 +646,19 @@ a:hover {
 .product-card-image-wrap {
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 260px;
   background: var(--bg-secondary);
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.25rem;
+  padding: 0;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 }
 
 .product-card-img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: var(--radius-sm);
+  object-position: center;
+  display: block;
   transition: transform var(--transition-smooth);
 }
 
@@ -1152,7 +1151,7 @@ a:hover {
   color: var(--color-text-main);
   margin-bottom: 1.5rem;
   position: relative;
-  display: inline-block;
+  display: block;
 }
 
 .footer-widget-title::after {
@@ -1167,6 +1166,8 @@ a:hover {
 
 .footer-nav-list {
   list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -1178,6 +1179,7 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 0;
   transition: all var(--transition-fast);
 }
 
@@ -1345,4 +1347,127 @@ a:hover {
     opacity: 1;
   }
 }
+
+/* ==========================================================================
+   CUSTOM ACCORDION (Light & Dark Theme Visibility + RTL Precision)
+   ========================================================================== */
+.accordion-item {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--color-text-main) !important;
+  transition: border-color var(--transition-fast);
+}
+
+.accordion-item:hover {
+  border-color: var(--color-electric) !important;
+}
+
+.accordion-button {
+  background-color: var(--bg-card) !important;
+  color: var(--color-text-main) !important;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: none !important;
+  border: none;
+  transition: all var(--transition-fast);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--bg-secondary) !important;
+  color: var(--color-electric) !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+  border-color: var(--color-electric);
+}
+
+.accordion-body {
+  background-color: var(--bg-card) !important;
+  color: var(--color-text-muted) !important;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Accordion Arrow Icon - Dark Theme: Electric Yellow */
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFD400' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-size: 18px 18px;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.25s ease-in-out;
+}
+
+/* Accordion Arrow Icon - Light Theme: High-Contrast Dark */
+[data-theme="light"] .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23101010' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+}
+
+[data-theme="light"] .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B8860B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+}
+
+/* RTL Accordion Alignment */
+[dir="rtl"] .accordion-button {
+  text-align: right;
+}
+
+[dir="rtl"] .accordion-button::after {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+/* ==========================================================================
+   BACK TO TOP BUTTON
+   ========================================================================== */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 1.5px solid var(--color-electric);
+  color: var(--color-electric);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1040;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), var(--shadow-electric);
+}
+
+.back-to-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+  background: var(--color-electric);
+  color: #101010;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 212, 0, 0.5);
+}
+
+[dir="rtl"] .back-to-top-btn {
+  right: auto;
+  left: 28px;
+}
+
+/* Universal Text Adaptive Helper */
+.text-adaptive {
+  color: var(--color-text-main) !important;
+}
+
 
