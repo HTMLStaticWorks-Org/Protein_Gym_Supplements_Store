@@ -929,18 +929,20 @@
 .specimen-row {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--border-color);
+  padding: 0.65rem 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   cursor: pointer;
+  color: #FFFFFF !important;
   transition: all var(--transition-fast);
 }
 
 .specimen-row:hover,
 .specimen-row.active {
-  background: rgba(255, 212, 0, 0.15);
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  color: var(--color-electric);
+  background: rgba(255, 212, 0, 0.18);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  color: #FFD400 !important;
+  border-radius: var(--radius-sm);
 }
 
 /* Myth vs Fact Flip Cards */
@@ -1120,5 +1122,101 @@
 
   html {
     font-size: 18px;
+  }
+}
+
+
+/* ==========================================================================
+   ITERATION SPECIFIC RESPONSIVE ENHANCEMENTS (ITEMS 20-27)
+   ========================================================================== */
+
+/* Item 21: Home 1 Manifesto 4th Pillar Centering at 1024px */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .statement-pillars-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .statement-pillars-grid .statement-pillar-item:last-child {
+    grid-column: 2 !important;
+    justify-self: center;
+  }
+}
+@media (max-width: 768px) {
+  .statement-pillars-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Item 23: Home 2 Brand Tab Buttons Mobile Stack */
+@media (max-width: 768px) {
+  .brand-filter-nav {
+    flex-direction: column !important;
+    overflow-x: visible !important;
+    gap: 0.65rem !important;
+  }
+  .brand-filter-tab {
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+  }
+}
+
+/* Item 24: About Page Verification Matrix Alignment */
+.verification-matrix-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 0;
+  gap: 1rem;
+}
+@media (max-width: 576px) {
+  .verification-matrix-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+
+/* Item 26: Products Page Collapsible Filter Sidebar (<= 1024px / xl breakpoint) */
+@media (min-width: 1200px) {
+  #catalogFilterCollapse.collapse:not(.show) {
+    display: block !important;
+  }
+}
+.filter-dropdown-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-electric);
+  color: var(--color-electric);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.25rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all var(--transition-fast);
+}
+.filter-dropdown-btn:hover,
+.filter-dropdown-btn[aria-expanded="true"] {
+  background: var(--color-electric);
+  color: #101010;
+}
+
+/* Item 27: Guide Page Label Specimen Responsive Optimization */
+@media (max-width: 768px) {
+  .label-breakdown-card {
+    padding: 1.25rem 1rem !important;
+  }
+  .interactive-specimen {
+    padding: 1.25rem 1rem !important;
+  }
+  .specimen-title {
+    font-size: 1.6rem !important;
+  }
+  .specimen-row {
+    padding: 0.6rem 0.75rem !important;
+    font-size: 0.85rem !important;
+    gap: 0.5rem !important;
+  }
+  .label-inspector-grid {
+    gap: 1.5rem !important;
   }
 }

@@ -61,12 +61,6 @@
           <i data-lucide="search" style="width: 20px; height: 20px;"></i>
         </button>
 
-        <!-- Cart Button with Counter Badge -->
-        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleCartDrawer(true)" title="Shopping Cart">
-          <i data-lucide="shopping-bag" style="width: 20px; height: 20px;"></i>
-          <span class="cart-count-badge" style="display: none;">0</span>
-        </button>
-
         <!-- Theme Switcher (Square Icon Button) -->
         <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleTheme()" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
           <i data-lucide="moon" class="theme-toggle-icon" style="width: 20px; height: 20px;"></i>
@@ -77,6 +71,12 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 7H4M16 3l4 4-4 4M4 17h16M8 21l-4-4 4-4"/>
           </svg>
+        </button>
+
+        <!-- Cart Button with Counter Badge -->
+        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleCartDrawer(true)" title="Shopping Cart">
+          <i data-lucide="shopping-bag" style="width: 20px; height: 20px;"></i>
+          <span class="cart-count-badge" style="display: none;">0</span>
         </button>
       </div>
 
@@ -116,32 +116,31 @@
       </ul>
 
       <div class="mobile-nav-controls">
-        <button type="button" class="btn-iron btn-outline-electric w-100 justify-content-start" onclick="IRONVAULT_STORE.toggleSearchModal(true)">
+        <button type="button" class="btn-iron btn-outline-electric w-100 justify-content-start mb-2" onclick="IRONVAULT_STORE.toggleSearchModal(true)">
           <i data-lucide="search" style="width: 18px; height: 18px;"></i>
           <span>Search Products</span>
         </button>
 
-        <button type="button" class="btn-iron btn-electric w-100 justify-content-between" onclick="IRONVAULT_STORE.toggleCartDrawer(true)">
-          <span class="d-flex align-items-center gap-2">
-            <i data-lucide="shopping-bag" style="width: 18px; height: 18px;"></i>
-            <span>View Shopping Cart</span>
-          </span>
-          <span class="cart-count-badge" style="position: static; display: none;">0</span>
-        </button>
-
-        <div class="mobile-control-row">
-          <span class="small fw-bold text-muted-custom">THEME MODE</span>
-          <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleTheme()" title="Toggle Theme" aria-label="Toggle Theme">
+        <div class="d-flex align-items-center gap-2 w-100">
+          <!-- Theme Switcher (Icon Button Before Cart) -->
+          <button type="button" class="nav-icon-btn flex-shrink-0" onclick="IRONVAULT_STORE.toggleTheme()" title="Toggle Theme" aria-label="Toggle Theme">
             <i data-lucide="moon" class="theme-toggle-icon" style="width: 20px; height: 20px;"></i>
           </button>
-        </div>
 
-        <div class="mobile-control-row">
-          <span class="small fw-bold text-muted-custom">LANGUAGE DIRECTION</span>
-          <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleDirection()" title="Toggle RTL/LTR" aria-label="Toggle RTL/LTR">
+          <!-- RTL Switcher (Icon Button Before Cart) -->
+          <button type="button" class="nav-icon-btn flex-shrink-0" onclick="IRONVAULT_STORE.toggleDirection()" title="Toggle RTL/LTR" aria-label="Toggle RTL/LTR">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 7H4M16 3l4 4-4 4M4 17h16M8 21l-4-4 4-4"/>
             </svg>
+          </button>
+
+          <!-- Cart Button -->
+          <button type="button" class="btn-iron btn-electric flex-grow-1 justify-content-between" onclick="IRONVAULT_STORE.toggleCartDrawer(true)">
+            <span class="d-flex align-items-center gap-2">
+              <i data-lucide="shopping-bag" style="width: 18px; height: 18px;"></i>
+              <span>View Cart</span>
+            </span>
+            <span class="cart-count-badge" style="position: static; display: none;">0</span>
           </button>
         </div>
       </div>
@@ -177,13 +176,13 @@
         <div class="row g-4">
           <!-- Whey Concentrate -->
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="p-4 bg-card-custom rounded border h-100" style="border-color: var(--border-color) !important;">
+            <div class="p-4 bg-card-custom rounded border h-100 d-flex flex-column" style="border-color: var(--border-color) !important;">
               <span class="badge-custom badge-bestseller mb-3">70% – 80% PURITY</span>
               <h4 class="display-font mb-2">Whey Concentrate (WPC)</h4>
               <p class="small text-muted-custom mb-3">
                 Cold-filtered liquid whey retaining natural subfractions (immunoglobulins, lactoferrin). Contains modest traces of milk fat and natural lactose with creamy flavor texture.
               </p>
-              <div class="small p-2 bg-secondary-custom rounded text-muted-custom">
+              <div class="small p-2 bg-secondary-custom rounded text-muted-custom mt-auto">
                 <strong>Best For:</strong> Cost-effective daily protein synthesis and general training recovery.
               </div>
             </div>
@@ -191,13 +190,13 @@
 
           <!-- Whey Isolate -->
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="p-4 bg-card-custom rounded border h-100" style="border-color: var(--border-color) !important;">
+            <div class="p-4 bg-card-custom rounded border h-100 d-flex flex-column" style="border-color: var(--border-color) !important;">
               <span class="badge-custom badge-pro mb-3">90%+ PURITY</span>
               <h4 class="display-font mb-2">Whey Isolate (WPI)</h4>
               <p class="small text-muted-custom mb-3">
                 Undergoes cross-flow micro-filtration to strip out virtually all lactose, fats, and carbohydrates. Results in an ultra-pure, light-mixing protein suitable for lactose-sensitive athletes.
               </p>
-              <div class="small p-2 bg-secondary-custom rounded text-muted-custom">
+              <div class="small p-2 bg-secondary-custom rounded text-muted-custom mt-auto">
                 <strong>Best For:</strong> Lean cutting phases, rapid post-workout digestion, and low carb diets.
               </div>
             </div>
@@ -205,13 +204,13 @@
 
           <!-- Plant-Based Protein -->
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="p-4 bg-card-custom rounded border h-100" style="border-color: var(--border-color) !important;">
+            <div class="p-4 bg-card-custom rounded border h-100 d-flex flex-column" style="border-color: var(--border-color) !important;">
               <span class="badge-custom badge-purity mb-3">100% DAIRY-FREE</span>
               <h4 class="display-font mb-2">Plant-Based Protein</h4>
               <p class="small text-muted-custom mb-3">
                 Blends organic yellow pea isolate, sprouted brown rice, and hemp seed to achieve a complete essential amino acid (EAA) profile without dairy, soy, or gluten allergens.
               </p>
-              <div class="small p-2 bg-secondary-custom rounded text-muted-custom">
+              <div class="small p-2 bg-secondary-custom rounded text-muted-custom mt-auto">
                 <strong>Best For:</strong> Vegan lifters, dairy intolerance, and environmentally conscious fueling.
               </div>
             </div>
@@ -219,13 +218,13 @@
 
           <!-- Hydrolyzed & Blends -->
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="p-4 bg-card-custom rounded border h-100" style="border-color: var(--border-color) !important;">
+            <div class="p-4 bg-card-custom rounded border h-100 d-flex flex-column" style="border-color: var(--border-color) !important;">
               <span class="badge-custom badge-stim mb-3">PRE-DIGESTED</span>
               <h4 class="display-font mb-2">Hydrolyzed &amp; Blends</h4>
               <p class="small text-muted-custom mb-3">
                 Enzymatically pre-cleaved peptide chains designed for immediate gastrointestinal transit. Multi-stage blends combine fast and slow-digesting micellar casein for sustained amino release.
               </p>
-              <div class="small p-2 bg-secondary-custom rounded text-muted-custom">
+              <div class="small p-2 bg-secondary-custom rounded text-muted-custom mt-auto">
                 <strong>Best For:</strong> High-performance intra-day feeding and nighttime muscle preservation.
               </div>
             </div>
@@ -347,11 +346,26 @@
                 <span class="text-electric font-monospace fw-bold">07.</span>
                 <h4 class="display-font mb-0">Athlete Vitamins &amp; Minerals</h4>
               </div>
-              <p class="small text-muted-custom mb-2">Comprehensive micronutrient insurance countering increased oxidative stress and metabolic turnover from high volume training.</p>
-              <div class="row g-2 small text-muted-custom">
-                <div class="col-md-4">&bull; Chelate mineral forms (e.g. Zinc Bisglycinate, Magnesium Citrate) for high bioavailability</div>
-                <div class="col-md-4">&bull; Active methylated B-complex forms (Methylcobalamin B12)</div>
-                <div class="col-md-4">&bull; Balanced antioxidant matrix without mega-dosing that blunts training adaptation</div>
+              <p class="small text-muted-custom mb-3">Comprehensive micronutrient insurance countering increased oxidative stress and metabolic turnover from high volume training.</p>
+              <div class="row g-3 small text-muted-custom">
+                <div class="col-md-4">
+                  <div class="p-3 bg-secondary-custom rounded border h-100 d-flex align-items-start gap-2" style="border-color: var(--border-color) !important;">
+                    <i data-lucide="check-circle" class="text-electric flex-shrink-0 mt-1" style="width: 16px; height: 16px;"></i>
+                    <span>Chelate mineral forms (e.g. Zinc Bisglycinate, Magnesium Citrate) for high bioavailability</span>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="p-3 bg-secondary-custom rounded border h-100 d-flex align-items-start gap-2" style="border-color: var(--border-color) !important;">
+                    <i data-lucide="check-circle" class="text-electric flex-shrink-0 mt-1" style="width: 16px; height: 16px;"></i>
+                    <span>Active methylated B-complex forms (Methylcobalamin B12) for sustained ATP production</span>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="p-3 bg-secondary-custom rounded border h-100 d-flex align-items-start gap-2" style="border-color: var(--border-color) !important;">
+                    <i data-lucide="check-circle" class="text-electric flex-shrink-0 mt-1" style="width: 16px; height: 16px;"></i>
+                    <span>Balanced antioxidant matrix without mega-dosing that blunts natural training adaptation</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -549,20 +563,77 @@
     <!-- SECTION 6 – SUPPLEMENT SAFETY -->
     <section class="section-padding bg-secondary-custom">
       <div class="iron-container">
-        <div class="p-5 bg-card-custom rounded border" style="border-color: var(--border-electric) !important;" data-aos="fade-up">
-          <div class="d-flex align-items-center gap-3 mb-3">
-            <i data-lucide="alert-shield" class="text-electric" style="width: 36px; height: 36px;"></i>
-            <h3 class="display-font mb-0" style="font-size: 2rem;">RESPONSIBLE SUPPLEMENT SAFETY &amp; GUIDANCE</h3>
-          </div>
-          <p class="text-muted-custom mb-4">
-            Sports nutrition products are dietary supplements intended to complement a balanced diet and rigorous exercise regimen—not to treat, diagnose, cure, or prevent any medical condition.
-          </p>
+        <div class="p-4 p-lg-5 bg-card-custom rounded border electric-border-card" data-aos="fade-up">
+          <div class="row g-4 align-items-center">
+            <!-- Left Image Column -->
+            <div class="col-lg-5">
+              <div class="position-relative rounded overflow-hidden h-100" style="min-height: clamp(220px, 35vw, 360px);">
+                <img src="im/pexels-andres-ayrton-6551145.jpg" 
+                     alt="Athlete preparing verified sports nutrition safely" 
+                     class="img-fluid rounded border w-100 h-100" 
+                     style="object-fit: cover; border-color: var(--border-electric); max-height: 420px;" />
+                <div class="position-absolute bottom-0 start-0 m-3 p-2 px-3 bg-dark rounded border" style="background: rgba(16,16,16,0.92) !important; border-color: var(--border-color) !important;">
+                  <span class="display-font text-electric small font-monospace d-block">CLINICAL SAFETY FIRST</span>
+                  <small style="color: #D6D6D6;">Vetted Dosages &bull; Zero Spiking</small>
+                </div>
+              </div>
+            </div>
 
-          <div class="row g-3 small text-muted-custom">
-            <div class="col-md-6">&bull; <strong>Always read complete product labels</strong> and never exceed the suggested manufacturer serving size.</div>
-            <div class="col-md-6">&bull; <strong>Check allergen warnings</strong> for dairy, egg, soy, tree nuts, and shellfish cross-contamination.</div>
-            <div class="col-md-6">&bull; <strong>Monitor total caffeine consumption</strong> from pre-workouts, coffee, and energy drinks to avoid elevated heart rates.</div>
-            <div class="col-md-6">&bull; <strong>Consult a qualified healthcare professional</strong> before use if you are pregnant, nursing, taking medication, or have a pre-existing health condition.</div>
+            <!-- Right Content & Bullet Points Column -->
+            <div class="col-lg-7">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i data-lucide="shield-alert" class="text-electric" style="width: 28px; height: 28px;"></i>
+                <span class="section-tag mb-0">Athletic Health Protocol</span>
+              </div>
+              <h3 class="display-font mb-2" style="font-size: clamp(1.8rem, 3vw, 2.4rem);">
+                RESPONSIBLE SUPPLEMENT <span class="text-electric">SAFETY &amp; GUIDANCE</span>
+              </h3>
+              <p class="text-muted-custom small mb-4">
+                Sports nutrition products are dietary supplements intended to complement a balanced diet and rigorous exercise regimen—not to treat, diagnose, cure, or prevent any medical condition.
+              </p>
+
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="p-3 bg-secondary-custom rounded border h-100 d-flex gap-2 align-items-start" style="border-color: var(--border-color) !important;">
+                    <i data-lucide="check-circle" class="text-electric flex-shrink-0 mt-1" style="width: 18px; height: 18px;"></i>
+                    <div class="small text-muted-custom">
+                      <strong class="text-adaptive d-block mb-1">Read Complete Labels:</strong>
+                      Never exceed the suggested manufacturer serving size or stack conflicting stimulants.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="p-3 bg-secondary-custom rounded border h-100 d-flex gap-2 align-items-start" style="border-color: var(--border-color) !important;">
+                    <i data-lucide="check-circle" class="text-electric flex-shrink-0 mt-1" style="width: 18px; height: 18px;"></i>
+                    <div class="small text-muted-custom">
+                      <strong class="text-adaptive d-block mb-1">Check Allergen Warnings:</strong>
+                      Verify dairy, egg, soy, gluten, and tree nut cross-contamination disclosures.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="p-3 bg-secondary-custom rounded border h-100 d-flex gap-2 align-items-start" style="border-color: var(--border-color) !important;">
+                    <i data-lucide="check-circle" class="text-electric flex-shrink-0 mt-1" style="width: 18px; height: 18px;"></i>
+                    <div class="small text-muted-custom">
+                      <strong class="text-adaptive d-block mb-1">Monitor Total Caffeine:</strong>
+                      Account for coffee and energy drinks alongside pre-workouts to avoid elevated heart rates.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="p-3 bg-secondary-custom rounded border h-100 d-flex gap-2 align-items-start" style="border-color: var(--border-color) !important;">
+                    <i data-lucide="check-circle" class="text-electric flex-shrink-0 mt-1" style="width: 18px; height: 18px;"></i>
+                    <div class="small text-muted-custom">
+                      <strong class="text-adaptive d-block mb-1">Consult Professionals:</strong>
+                      Seek advice from a sports physician before use if taking medication or managing pre-existing conditions.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

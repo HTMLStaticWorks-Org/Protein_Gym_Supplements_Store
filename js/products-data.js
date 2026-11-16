@@ -16,7 +16,7 @@ const IRONVAULT_PRODUCTS = [
     reviewsCount: 1420,
     flavours: ["Double Rich Chocolate", "Vanilla Ice Cream", "Extreme Milk Chocolate", "Mocha Cappuccino"],
     sizes: ["2 lbs (907g)", "5 lbs (2.27kg)", "10 lbs (4.54kg)"],
-    image: "im/nutraseller-manufacturing-OaCmHesHp8M-unsplash.jpg",
+    image: "im/pexels-andres-ayrton-6551143.jpg",
     badge: "Bestseller",
     badgeClass: "badge-bestseller",
     description: "The world's benchmark for whey protein quality. Packed with 24g of microfiltered whey protein isolate, 5.5g of naturally occurring BCAAs, and only 1g of sugar per scoop to power lean muscle synthesis.",
@@ -574,7 +574,7 @@ const IRONVAULT_BRANDS = [
     count: 2,
     origin: "India",
     category: "Raw Single Ingredients",
-    banner: "im/nutraseller-manufacturing-OaCmHesHp8M-unsplash.jpg"
+    banner: "im/pexels-mayaramombellifotografias-36429456.jpg"
   }
 ];
 
