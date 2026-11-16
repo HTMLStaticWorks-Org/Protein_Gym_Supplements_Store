@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supplement Brands Marketplace | IRONVAULT Sports Nutrition</title>
+  <meta name="description" content="Discover authorized sports nutrition brands: Optimum Nutrition, Myprotein, MuscleTech, Dymatize, GNC, and Isopure at IRONVAULT." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  
+  <!-- Core Theme Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP FLASH BATCH DROP COUNTDOWN TICKER
+       ========================================================================== -->
+  <div class="flash-drop-banner text-center d-flex align-items-center justify-content-center gap-3">
+    <span><span class="text-electric">&bull; VAULT BATCH DROP #04:</span> Creapure® &amp; Hydrolyzed ISO100 Priority Allocation</span>
+    <div class="countdown-box">
+      <span class="countdown-digit" id="countHours">04</span><span>:</span>
+      <span class="countdown-digit" id="countMins">28</span><span>:</span>
+      <span class="countdown-digit" id="countSecs">45</span>
+    </div>
+    <a href="products.html" class="badge-custom badge-bestseller ms-2 text-decoration-none">Claim Stack &rarr;</a>
+  </div>
+
+  <!-- ==========================================================================
+       GLOBAL NAVBAR
+       Responsive Rule: At <=1024px, show ONLY Logo and Hamburger!
+       ========================================================================== -->
+  <nav class="iron-navbar">
+    <div class="iron-container navbar-wrapper">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo-link" aria-label="IRONVAULT Home">
+        <svg class="brand-logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="10,6 38,6 44,18 36,44 18,44 8,18" fill="#191919" stroke="#FFD400" stroke-width="2.5" stroke-linejoin="round"/>
+          <polygon points="24,10 34,10 28,22 36,22 20,40 24,26 16,26" fill="#FFD400"/>
+        </svg>
+        <div class="brand-logo-text">
+          <span class="brand-logo-name">IRON<span class="text-electric">VAULT</span></span>
+          <span class="brand-logo-tag">SPORTS NUTRITION</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu (>1024px) -->
+      <ul class="desktop-nav-menu mb-0">
+        <li><a href="index.html" class="desktop-nav-link">Home 1</a></li>
+        <li><a href="home-2.html" class="desktop-nav-link active">Home 2</a></li>
+        <li><a href="about.html" class="desktop-nav-link">About</a></li>
+        <li><a href="services.html" class="desktop-nav-link">Services</a></li>
+        <li><a href="products.html" class="desktop-nav-link">Products</a></li>
+        <li><a href="buying-guide.html" class="desktop-nav-link">Buying Guide</a></li>
+        <li><a href="contact.html" class="desktop-nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Desktop Nav Actions (>1024px) -->
+      <div class="desktop-nav-actions">
+        <!-- Search Button -->
+        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleSearchModal(true)" title="Search Supplements">
+          <i data-lucide="search" style="width: 20px; height: 20px;"></i>
+        </button>
+
+        <!-- Cart Button with Counter Badge -->
+        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleCartDrawer(true)" title="Shopping Cart">
+          <i data-lucide="shopping-bag" style="width: 20px; height: 20px;"></i>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Theme Switcher (Square Icon Button) -->
+        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleTheme()" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+          <i data-lucide="moon" class="theme-toggle-icon" style="width: 20px; height: 20px;"></i>
+        </button>
+
+        <!-- RTL/LTR Direction Switcher (Square Icon Button) -->
+        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleDirection()" title="Toggle RTL/LTR" aria-label="Toggle RTL/LTR">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 7H4M16 3l4 4-4 4M4 17h16M8 21l-4-4 4-4"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Hamburger Button (Displayed at <=1024px on the right corner) -->
+      <button type="button" class="hamburger-toggle-btn" id="hamburgerToggleBtn" aria-label="Open Navigation Drawer">
+        <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Drawer (Holds all links and actions for <=1024px) -->
+  <div class="offcanvas-backdrop" id="mobileNavBackdrop"></div>
+  <aside class="iron-offcanvas" id="ironMobileOffcanvas">
+    <div class="offcanvas-header">
+      <a href="index.html" class="brand-logo-link">
+        <svg class="brand-logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px;">
+          <polygon points="10,6 38,6 44,18 36,44 18,44 8,18" fill="#191919" stroke="#FFD400" stroke-width="2.5" stroke-linejoin="round"/>
+          <polygon points="24,10 34,10 28,22 36,22 20,40 24,26 16,26" fill="#FFD400"/>
+        </svg>
+        <div class="brand-logo-text">
+          <span class="brand-logo-name" style="font-size: 1.5rem;">IRON<span class="text-electric">VAULT</span></span>
+        </div>
+      </a>
+      <button type="button" class="nav-icon-btn" id="offcanvasCloseBtn" aria-label="Close Drawer">
+        <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link"><span>Home 1</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
+        <li><a href="home-2.html" class="mobile-nav-link active"><span>Home 2</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
+        <li><a href="about.html" class="mobile-nav-link"><span>About</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
+        <li><a href="services.html" class="mobile-nav-link"><span>Services</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
+        <li><a href="products.html" class="mobile-nav-link"><span>Products</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
+        <li><a href="buying-guide.html" class="mobile-nav-link"><span>Buying Guide</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
+        <li><a href="contact.html" class="mobile-nav-link"><span>Contact</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
+      </ul>
+
+      <div class="mobile-nav-controls">
+        <button type="button" class="btn-iron btn-outline-electric w-100 justify-content-start" onclick="IRONVAULT_STORE.toggleSearchModal(true)">
+          <i data-lucide="search" style="width: 18px; height: 18px;"></i>
+          <span>Search Products</span>
+        </button>
+
+        <button type="button" class="btn-iron btn-electric w-100 justify-content-between" onclick="IRONVAULT_STORE.toggleCartDrawer(true)">
+          <span class="d-flex align-items-center gap-2">
+            <i data-lucide="shopping-bag" style="width: 18px; height: 18px;"></i>
+            <span>View Shopping Cart</span>
+          </span>
+          <span class="cart-count-badge" style="position: static; display: none;">0</span>
+        </button>
+
+        <div class="mobile-control-row">
+          <span class="small fw-bold text-muted-custom">THEME MODE</span>
+          <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleTheme()" title="Toggle Theme" aria-label="Toggle Theme">
+            <i data-lucide="moon" class="theme-toggle-icon" style="width: 20px; height: 20px;"></i>
+          </button>
+        </div>
+
+        <div class="mobile-control-row">
+          <span class="small fw-bold text-muted-custom">LANGUAGE DIRECTION</span>
+          <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleDirection()" title="Toggle RTL/LTR" aria-label="Toggle RTL/LTR">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 7H4M16 3l4 4-4 4M4 17h16M8 21l-4-4 4-4"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       PAGE 2 – HOME VERSION 2: THE SUPPLEMENT BRAND MARKETPLACE
+       100% Unique Architecture: Live Brand Switcher Hero, AJAX Tabs,
+       Comparison Matrix, Goal-to-Stack Configurator, Partner Seals
+       ========================================================================== -->
+  <main>
+    <!-- SECTION 1 – BRAND-FOCUSED HERO (INTERACTIVE SWITCHER) -->
+    <section class="home2-hero cyber-grid-bg">
+      <div class="iron-container">
+        <div class="hero-market-layout">
+          <div>
+            <span class="section-tag mb-2">Multi-Brand Sports Nutrition Exchange</span>
+            <h1 class="display-font" style="font-size: clamp(2.6rem, 5.5vw, 4.8rem); line-height: 1; margin-bottom: 1.25rem;">
+              YOUR FAVORITE NUTRITION. <span class="text-electric">ONE DESTINATION.</span>
+            </h1>
+            <p class="fs-5 text-muted-custom mb-3" style="max-width: 520px;">
+              Explore authorized sports nutrition from world-leading supplement brands. Compare formulations, verify batch purity, and order directly.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 mb-4">
+              <a href="#interactiveCatalog" class="btn-iron btn-electric">
+                <i data-lucide="award" style="width: 18px; height: 18px;"></i>
+                Shop All Brands
+              </a>
+              <a href="#comparisonMatrix" class="btn-iron btn-outline-electric">
+                Compare Formulas &rarr;
+              </a>
+            </div>
+
+            <!-- Interactive Brand Switcher Pills -->
+            <div class="mb-2 small text-muted-custom fw-bold">CLICK A BRAND TO PREVIEW:</div>
+            <div class="brand-ticker-row">
+              <span class="brand-ticker-pill active">Optimum Nutrition</span>
+              <span class="brand-ticker-pill">Dymatize</span>
+              <span class="brand-ticker-pill">Myprotein</span>
+              <span class="brand-ticker-pill">MuscleTech</span>
+              <span class="brand-ticker-pill">GNC</span>
+              <span class="brand-ticker-pill">Isopure</span>
+            </div>
+          </div>
+
+          <!-- Dynamic Hero Card Driven by Brand Switcher -->
+          <div class="text-center position-relative" data-aos="zoom-in">
+            <div class="p-4 bg-card-custom rounded border electric-border-card" style="box-shadow: 0 20px 50px rgba(0,0,0,0.7);">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge-custom badge-bestseller" id="heroBrandBadge">World #1 Whey</span>
+                <span class="small text-electric font-monospace" id="heroBrandStat">24G Protein</span>
+              </div>
+
+              <img src="im/nutraseller-manufacturing-OaCmHesHp8M-unsplash.jpg" 
+                   alt="Featured Brand Packaging" 
+                   id="heroBrandImg" 
+                   class="img-fluid rounded mb-3" 
+                   style="max-height: 340px; width: 100%; object-fit: cover; transition: opacity 0.25s ease;" />
+
+              <h3 class="display-font text-white mb-1" id="heroBrandTitle">OPTIMUM NUTRITION</h3>
+              <p class="small text-muted-custom mb-3" id="heroBrandDesc">
+                The benchmark of gold-standard whey isolates and mass gainers since 1986.
+              </p>
+
+              <a href="products.html?brand=Optimum%20Nutrition" class="btn-iron btn-outline-electric btn-sm-iron w-100">
+                Explore Brand Lineup &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 – INTERACTIVE AJAX BRAND FILTER HUB -->
+    <section class="section-padding bg-secondary-custom" id="interactiveCatalog">
+      <div class="iron-container">
+        <div class="d-flex flex-wrap align-items-end justify-content-between mb-4">
+          <div>
+            <span class="section-tag">Instant Brand Catalog</span>
+            <h2 class="section-title mb-0">BRAND <span class="text-electric">DISCOVERY HUB</span></h2>
+          </div>
+          <span class="small text-muted-custom">Instant Filter &bull; Zero Reloads</span>
+        </div>
+
+        <!-- Brand Tabs Navigation -->
+        <div class="brand-filter-nav" id="brandFilterNav"></div>
+
+        <!-- Dynamic Product Results Grid -->
+        <div class="row g-4" id="brandTabProductsGrid"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 – 4-WAY SUPPLEMENT COMPARISON MATRIX -->
+    <section class="section-padding" id="comparisonMatrix">
+      <div class="iron-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Formulation Benchmark</span>
+          <h2 class="section-title">THE 4-WAY <span class="text-electric">COMPARISON MATRIX</span></h2>
+          <p class="section-subtitle">Side-by-side technical breakdown to choose the exact protein architecture for your fitness cycle.</p>
+        </div>
+
+        <div class="comparison-table-wrap" data-aos="fade-up">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Nutritional Parameter</th>
+                <th style="width: 18.75%;">Whey Isolate (WPI)</th>
+                <th style="width: 18.75%;">Whey Concentrate (WPC)</th>
+                <th style="width: 18.75%;">Plant Protein Blend</th>
+                <th style="width: 18.75%;">Mass Gainer Complex</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Protein Purity / Yield</strong></td>
+                <td><span class="text-electric fw-bold">90% – 93%</span></td>
+                <td>75% – 80%</td>
+                <td>70% – 78%</td>
+                <td>20% – 30% (High Calorie)</td>
+              </tr>
+              <tr>
+                <td><strong>Digestion &amp; Transit Speed</strong></td>
+                <td><span class="badge-custom badge-pro">Ultra-Fast (30m)</span></td>
+                <td>Moderate (60-90m)</td>
+                <td>Steady Sustained (90m)</td>
+                <td>Extended (2-3 Hours)</td>
+              </tr>
+              <tr>
+                <td><strong>Lactose &amp; Dairy Sugar</strong></td>
+                <td><strong class="text-success">&lt; 0.5g (Virtually Zero)</strong></td>
+                <td>1.5g – 2.5g</td>
+                <td><strong class="text-success">0g (100% Dairy-Free)</strong></td>
+                <td>15g – 25g</td>
+              </tr>
+              <tr>
+                <td><strong>Leucine Content / Scoop</strong></td>
+                <td><span class="text-electric fw-bold">2.8g – 3.2g</span></td>
+                <td>2.4g – 2.7g</td>
+                <td>2.0g – 2.4g</td>
+                <td>4.5g (Multi-Scoop)</td>
+              </tr>
+              <tr>
+                <td><strong>Primary Training Goal</strong></td>
+                <td>Lean Cutting &amp; Muscle Repair</td>
+                <td>Daily Muscle Synthesis</td>
+                <td>Vegan / Clean Digestion</td>
+                <td>Aggressive Weight Bulk</td>
+              </tr>
+              <tr>
+                <td><strong>Cost-per-Gram Value</strong></td>
+                <td>Premium Purity Grade</td>
+                <td><span class="text-electric fw-bold">Best Everyday Value</span></td>
+                <td>Eco &amp; Allergen Safe</td>
+                <td>Maximum Caloric Density</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 – INTERACTIVE GOAL-TO-STACK CONFIGURATOR -->
+    <section class="section-padding bg-secondary-custom">
+      <div class="iron-container">
+        <div class="stack-configurator-box" data-aos="zoom-in">
+          <div class="row align-items-center g-5">
+            <!-- Left Config Options -->
+            <div class="col-lg-6">
+              <span class="section-tag mb-2">Automated Custom Stacking</span>
+              <h2 class="display-font mb-3" style="font-size: clamp(2rem, 3.8vw, 3.2rem);">
+                GOAL-TO-STACK <span class="text-electric">CONFIGURATOR</span>
+              </h2>
+              <p class="text-muted-custom mb-4">
+                Select your primary training objective to generate an aligned 3-supplement synergy stack with pre-calculated macros and bundle savings.
+              </p>
+
+              <div class="mb-3">
+                <label class="form-label-iron small mb-2">Select Primary Objective:</label>
+                <div class="config-btn-group">
+                  <button type="button" class="config-btn config-goal-btn active" data-goal="hypertrophy">Hypertrophy (Muscle)</button>
+                  <button type="button" class="config-btn config-goal-btn" data-goal="strength">Maximal Strength (ATP)</button>
+                  <button type="button" class="config-btn config-goal-btn" data-goal="lean">Lean Cutting (Isolate)</button>
+                  <button type="button" class="config-btn config-goal-btn" data-goal="vegan">Vegan Athletic</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Dynamic Output -->
+            <div class="col-lg-6">
+              <div class="p-4 bg-card-custom rounded border electric-border-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge-custom badge-bestseller" id="stackSavings">Save $14.98</span>
+                  <span class="display-font text-electric h3 mb-0" id="stackPrice">$114.99</span>
+                </div>
+
+                <h4 class="display-font text-white mb-2" id="stackTitle">THE HYPERTROPHY PROTOCOL</h4>
+                <p class="small text-muted-custom mb-3" id="stackMacros">45g Protein / day &bull; 5g Creatine &bull; 215 kcal Snack</p>
+
+                <div id="stackItemsList" class="mb-4"></div>
+
+                <button class="btn-iron btn-electric w-100" id="stackAddToCartBtn">
+                  <i data-lucide="shopping-bag" style="width: 18px; height: 18px;"></i>
+                  Add Complete Stack to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 – CERTIFIED PARTNER BRANDS TRUST GRID -->
+    <section class="section-padding">
+      <div class="iron-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Authorized Distribution</span>
+          <h2 class="section-title">CERTIFIED <span class="text-electric">MANUFACTURERS</span></h2>
+          <p class="section-subtitle">We partner exclusively with certified, third-party audited nutritional laboratories.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6" data-aos="fade-up">
+            <div class="p-4 bg-card-custom rounded border text-center h-100" style="border-color: var(--border-color) !important;">
+              <div class="brand-emblem-box mx-auto">
+                <i data-lucide="shield-check" style="width: 32px; height: 32px;"></i>
+              </div>
+              <h5 class="display-font mb-1">Optimum Nutrition</h5>
+              <span class="small text-electric font-monospace d-block mb-2">USA &bull; Gold Standard</span>
+              <p class="small text-muted-custom mb-0">Microfiltered whey isolate benchmark since 1986.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="p-4 bg-card-custom rounded border text-center h-100" style="border-color: var(--border-color) !important;">
+              <div class="brand-emblem-box mx-auto">
+                <i data-lucide="award" style="width: 32px; height: 32px;"></i>
+              </div>
+              <h5 class="display-font mb-1">Dymatize Nutrition</h5>
+              <span class="small text-electric font-monospace d-block mb-2">USA &bull; ISO100 Leader</span>
+              <p class="small text-muted-custom mb-0">Informed-Choice certified hydrolyzed isolates.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="p-4 bg-card-custom rounded border text-center h-100" style="border-color: var(--border-color) !important;">
+              <div class="brand-emblem-box mx-auto">
+                <i data-lucide="flask-conical" style="width: 32px; height: 32px;"></i>
+              </div>
+              <h5 class="display-font mb-1">Myprotein Labs</h5>
+              <span class="small text-electric font-monospace d-block mb-2">UK &bull; Creapure® Pure</span>
+              <p class="small text-muted-custom mb-0">German micronized creatine &amp; organic vegan lines.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="p-4 bg-card-custom rounded border text-center h-100" style="border-color: var(--border-color) !important;">
+              <div class="brand-emblem-box mx-auto">
+                <i data-lucide="zap" style="width: 32px; height: 32px;"></i>
+              </div>
+              <h5 class="display-font mb-1">MuscleTech Elite</h5>
+              <span class="small text-electric font-monospace d-block mb-2">USA &bull; Clinical Science</span>
+              <p class="small text-muted-custom mb-0">HPLC-certified high-potency pre-workouts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6 – VIP VAULT REWARDS TIER -->
+    <section class="section-padding bg-secondary-custom">
+      <div class="iron-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Loyalty Protocol</span>
+          <h2 class="section-title">VIP VAULT <span class="text-electric">MEMBERSHIP TIERS</span></h2>
+          <p class="section-subtitle">Earn reward points on every verified order, unlock early batch drops, and receive cold-freight upgrades.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Bronze Tier -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="p-4 bg-card-custom rounded border h-100 d-flex flex-column justify-content-between" style="border-color: var(--border-color) !important;">
+              <div>
+                <span class="badge-custom badge-pro mb-3">TIER 01</span>
+                <h4 class="display-font mb-2">Bronze Lifter</h4>
+                <div class="display-font text-white h3 mb-3">FREE <span class="fs-6 text-muted-custom">upon sign-up</span></div>
+                <ul class="list-unstyled small text-muted-custom mb-4">
+                  <li class="mb-2"><i data-lucide="check" class="text-electric me-1" style="width: 14px;"></i> 1 Point per $1 spent</li>
+                  <li class="mb-2"><i data-lucide="check" class="text-electric me-1" style="width: 14px;"></i> Access to demo checkout</li>
+                  <li><i data-lucide="check" class="text-electric me-1" style="width: 14px;"></i> Standard 48-hour delivery</li>
+                </ul>
+              </div>
+              <a href="products.html" class="btn-iron btn-outline-electric btn-sm-iron w-100">Start Earning &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Silver Tier -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="p-4 bg-card-custom rounded border h-100 d-flex flex-column justify-content-between electric-border-card">
+              <div>
+                <span class="badge-custom badge-bestseller mb-3">TIER 02 &bull; RECOMMENDED</span>
+                <h4 class="display-font mb-2">Silver Athlete</h4>
+                <div class="display-font text-electric h3 mb-3">$250 <span class="fs-6 text-muted-custom">Annual Spend</span></div>
+                <ul class="list-unstyled small text-muted-custom mb-4">
+                  <li class="mb-2"><i data-lucide="check" class="text-electric me-1" style="width: 14px;"></i> 1.5 Points per $1 spent</li>
+                  <li class="mb-2"><i data-lucide="check" class="text-electric me-1" style="width: 14px;"></i> 24-Hour Priority dispatch SLA</li>
+                  <li class="mb-2"><i data-lucide="check" class="text-electric me-1" style="width: 14px;"></i> Free flavor swapping on auto-refill</li>
+                  <li><i data-lucide="check" class="text-electric me-1" style="width: 14px;"></i> 10% off custom stack bundles</li>
+                </ul>
+              </div>
+              <a href="products.html" class="btn-iron btn-electric btn-sm-iron w-100">Unlock Silver Tier &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Gold Tier -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="p-4 bg-card-custom rounded border h-100 d-flex flex-column justify-content-between" style="border-color: var(--border-color) !important;">
+              <div>
+                <span class="badge-custom badge-stim mb-3">TIER 03 &bull; ELITE</span>
+                <h4 class="display-font mb-2">Gold Elite</h4>
+                <div class="display-font text-white h3 mb-3">$750 <span class="fs-6 text-muted-custom">Annual Spend</span></div>
+                <ul class="list-unstyled small text-muted-custom mb-4">
+                  <li class="mb-2"><i data-lucide="check" class="text-electric me-1" style="width: 14px;"></i> 2 Points per $1 spent</li>
+                  <li class="mb-2"><i data-lucide="check" class="text-electric me-1" style="width: 14px;"></i> VIP 1-on-1 Nutritionist Line</li>
+                  <li class="mb-2"><i data-lucide="check" class="text-electric me-1" style="width: 14px;"></i> Free expedited freight on all orders</li>
+                  <li><i data-lucide="check" class="text-electric me-1" style="width: 14px;"></i> Quarterly prototype batch samples</li>
+                </ul>
+              </div>
+              <a href="contact.html" class="btn-iron btn-outline-electric btn-sm-iron w-100">Apply for Elite Tier &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 – FINAL CTA -->
+    <section class="section-padding">
+      <div class="iron-container text-center">
+        <div class="p-5 bg-card-custom rounded border mx-auto" style="max-width: 820px; border-color: var(--border-electric) !important;" data-aos="zoom-in">
+          <span class="section-tag mb-2">Immediate Dispatch</span>
+          <h2 class="display-font mb-3" style="font-size: clamp(2.2rem, 4vw, 3.6rem);">
+            YOUR PERFECT SUPPLEMENT STACK <span class="text-electric">AWAITS.</span>
+          </h2>
+          <p class="text-muted-custom mb-4" style="max-width: 580px; margin-left: auto; margin-right: auto;">
+            Explore our curated catalog filtered by brand, category, flavour, and training goals. Every formula backed by real nutrition facts.
+          </p>
+          <a href="products.html" class="btn-iron btn-electric">
+            <i data-lucide="dumbbell" style="width: 18px; height: 18px;"></i>
+            Explore All Products
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER
+       ========================================================================== -->
+  <footer class="iron-footer">
+    <div class="iron-container">
+      <div class="row g-4">
+        <!-- Brand Info -->
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="brand-logo-link mb-3">
+            <svg class="brand-logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="10,6 38,6 44,18 36,44 18,44 8,18" fill="#191919" stroke="#FFD400" stroke-width="2.5" stroke-linejoin="round"/>
+              <polygon points="24,10 34,10 28,22 36,22 20,40 24,26 16,26" fill="#FFD400"/>
+            </svg>
+            <div class="brand-logo-text">
+              <span class="brand-logo-name">IRON<span class="text-electric">VAULT</span></span>
+              <span class="brand-logo-tag">SPORTS NUTRITION</span>
+            </div>
+          </a>
+          <p class="small text-muted-custom mb-4" style="max-width: 320px;">
+            IRONVAULT is a high-performance sports nutrition platform delivering vetted gym supplements for athletes, lifters, and fitness purists.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="X / Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-widget-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home 1</a></li>
+            <li><a href="home-2.html" class="footer-nav-link">Home 2</a></li>
+            <li><a href="about.html" class="footer-nav-link">About</a></li>
+            <li><a href="services.html" class="footer-nav-link">Services</a></li>
+            <li><a href="products.html" class="footer-nav-link">Products</a></li>
+            <li><a href="buying-guide.html" class="footer-nav-link">Buying Guide</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Product Categories -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-widget-title">Categories</h4>
+          <ul class="footer-nav-list">
+            <li><a href="products.html?category=Whey%20Protein" class="footer-nav-link">Whey Protein</a></li>
+            <li><a href="products.html?category=Creatine" class="footer-nav-link">Micronized Creatine</a></li>
+            <li><a href="products.html?category=Pre-Workout" class="footer-nav-link">Pre-Workout Stimulants</a></li>
+            <li><a href="products.html?category=BCAA%20%2F%20EAA" class="footer-nav-link">BCAA / EAA Recovery</a></li>
+            <li><a href="products.html?category=Plant%20Protein" class="footer-nav-link">Organic Plant Protein</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info & Demo Disclaimer -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-widget-title">Vault Desk</h4>
+          <p class="small text-muted-custom mb-2">
+            <i data-lucide="map-pin" style="width: 14px;" class="text-electric me-1"></i>
+            742 Olympic Blvd, Athletic District, CA 90015
+          </p>
+          <p class="small text-muted-custom mb-2">
+            <i data-lucide="phone" style="width: 14px;" class="text-electric me-1"></i>
+            +1 (800) 555-IRON (4766)
+          </p>
+          <p class="small text-muted-custom mb-3">
+            <i data-lucide="mail" style="width: 14px;" class="text-electric me-1"></i>
+            support@ironvault-demo.fit
+          </p>
+          <div class="p-2 bg-card-custom rounded border small text-muted-custom" style="border-color: var(--border-color) !important; font-size: 0.75rem;">
+            Demo store interface. All cart and preference states persist via browser localStorage.
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 IRONVAULT Sports Nutrition. All Rights Reserved. Built with Black &amp; Electric Yellow 2026 UI/UX.
+        </div>
+        <div class="d-flex gap-3">
+          <a href="services.html" class="text-muted-custom small">Wholesale &amp; Consulting</a>
+          <a href="buying-guide.html" class="text-muted-custom small">Label Transparency</a>
+          <a href="about.html" class="text-muted-custom small">About Us</a>
+          <a href="contact.html" class="text-muted-custom small">Bulk Enquiries</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       CART DRAWER, SEARCH MODAL, QUICK VIEW & CHECKOUT MODALS
+       ========================================================================== -->
+  <div class="offcanvas-backdrop" id="cartDrawerBackdrop" onclick="IRONVAULT_STORE.toggleCartDrawer(false)"></div>
+  <aside class="iron-cart-drawer" id="ironCartDrawer">
+    <div class="cart-drawer-header">
+      <div class="d-flex align-items-center gap-2">
+        <i data-lucide="shopping-bag" style="width: 22px; color: var(--color-electric);"></i>
+        <h3 class="display-font mb-0">YOUR CART</h3>
+      </div>
+      <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleCartDrawer(false)" aria-label="Close Cart">
+        <i data-lucide="x" style="width: 20px;"></i>
+      </button>
+    </div>
+    <div class="cart-empty-state" id="cartEmptyState" style="display: none;">
+      <i data-lucide="shopping-bag" class="cart-empty-icon"></i>
+      <h4 class="display-font mb-2">YOUR CART IS EMPTY</h4>
+      <p class="text-muted-custom small mb-4">Discover verified supplements to fuel your next workout cycle.</p>
+      <a href="products.html" class="btn-iron btn-electric" onclick="IRONVAULT_STORE.toggleCartDrawer(false)">Explore Products</a>
+    </div>
+    <div class="cart-drawer-body" id="cartDrawerItems"></div>
+    <div class="cart-drawer-footer" id="cartDrawerFooter">
+      <div class="cart-subtotal-row">
+        <span class="cart-subtotal-label">Subtotal:</span>
+        <span class="cart-subtotal-amount">$0.00</span>
+      </div>
+      <small class="text-muted-custom" style="font-size: 0.75rem;">Shipping calculated at checkout. Free shipping on orders over $50.00.</small>
+      <button type="button" class="btn-iron btn-electric w-100" onclick="IRONVAULT_STORE.openCheckoutDemo()">Proceed to Demo Checkout</button>
+    </div>
+  </aside>
+
+  <div class="iron-search-modal" id="ironSearchModal" onclick="if(event.target === this) IRONVAULT_STORE.toggleSearchModal(false)">
+    <div class="search-box-container">
+      <div class="search-input-wrap">
+        <i data-lucide="search" style="width: 28px; height: 28px; color: var(--color-electric);"></i>
+        <input type="text" id="searchModalInput" class="search-modal-input" placeholder="Search protein, creatine, brands, goals..." oninput="IRONVAULT_STORE.handleLiveSearch(this.value)" />
+        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleSearchModal(false)"><i data-lucide="x" style="width: 20px;"></i></button>
+      </div>
+      <div class="search-results-list" id="searchResultsList"></div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-iron" id="quickViewModalContent"></div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="checkoutDemoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content modal-content-iron">
+        <div class="modal-header modal-header-iron">
+          <h3 class="modal-title display-font mb-0">DEMO CHECKOUT</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body modal-body-iron" id="checkoutModalBody">
+          <div id="checkoutSummaryContent"></div>
+          <form onsubmit="IRONVAULT_STORE.submitDemoOrder(event)">
+            <h5 class="form-label-iron small mb-3">Shipping Details (Demo):</h5>
+            <div class="mb-3">
+              <input type="text" class="iron-form-control mb-2" placeholder="Full Name" required value="Marcus Vance" />
+              <input type="email" class="iron-form-control mb-2" placeholder="Email Address" required value="marcus.vance@example.com" />
+              <input type="text" class="iron-form-control" placeholder="Street Address" required value="742 Olympic Blvd" />
+            </div>
+            <div class="p-3 bg-secondary-custom rounded mb-3">
+              <span class="badge-custom badge-pro mb-1">FRONTEND DEMO SIMULATION</span>
+              <p class="small text-muted-custom mb-0">Testing environment only. No charges will be applied.</p>
+            </div>
+            <button type="submit" id="checkoutSubmitBtn" class="btn-iron btn-electric w-100">Place Demo Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Application Logic -->
+  <script src="js/products-data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home-2.js"></script>
+</body>
+</html>

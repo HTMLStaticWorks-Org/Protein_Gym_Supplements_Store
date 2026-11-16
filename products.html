@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products Catalogue | IRONVAULT Sports Nutrition</title>
+  <meta name="description" content="Browse premium sports nutrition organized by fitness goals, supplement categories, and trusted brands at IRONVAULT." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  
+  <!-- Core Theme Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       GLOBAL NAVBAR
+       Responsive Rule: At <=1024px, show ONLY Logo and Hamburger!
+       ========================================================================== -->
+  <nav class="iron-navbar">
+    <div class="iron-container navbar-wrapper">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo-link" aria-label="IRONVAULT Home">
+        <svg class="brand-logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="10,6 38,6 44,18 36,44 18,44 8,18" fill="#191919" stroke="#FFD400" stroke-width="2.5" stroke-linejoin="round"/>
+          <polygon points="24,10 34,10 28,22 36,22 20,40 24,26 16,26" fill="#FFD400"/>
+        </svg>
+        <div class="brand-logo-text">
+          <span class="brand-logo-name">IRON<span class="text-electric">VAULT</span></span>
+          <span class="brand-logo-tag">SPORTS NUTRITION</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu (>1024px) -->
+      <ul class="desktop-nav-menu mb-0">
+        <li><a href="index.html" class="desktop-nav-link">Home 1</a></li>
+        <li><a href="home-2.html" class="desktop-nav-link">Home 2</a></li>
+        <li><a href="about.html" class="desktop-nav-link">About</a></li>
+        <li><a href="services.html" class="desktop-nav-link">Services</a></li>
+        <li><a href="products.html" class="desktop-nav-link active">Products</a></li>
+        <li><a href="buying-guide.html" class="desktop-nav-link">Buying Guide</a></li>
+        <li><a href="contact.html" class="desktop-nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Desktop Nav Actions (>1024px) -->
+      <div class="desktop-nav-actions">
+        <!-- Search Button -->
+        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleSearchModal(true)" title="Search Supplements">
+          <i data-lucide="search" style="width: 20px; height: 20px;"></i>
+        </button>
+
+        <!-- Cart Button with Counter Badge -->
+        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleCartDrawer(true)" title="Shopping Cart">
+          <i data-lucide="shopping-bag" style="width: 20px; height: 20px;"></i>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Theme Switcher (Square Icon Button) -->
+        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleTheme()" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+          <i data-lucide="moon" class="theme-toggle-icon" style="width: 20px; height: 20px;"></i>
+        </button>
+
+        <!-- RTL/LTR Direction Switcher (Square Icon Button) -->
+        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleDirection()" title="Toggle RTL/LTR" aria-label="Toggle RTL/LTR">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 7H4M16 3l4 4-4 4M4 17h16M8 21l-4-4 4-4"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Hamburger Button (Displayed at <=1024px on the right corner) -->
+      <button type="button" class="hamburger-toggle-btn" id="hamburgerToggleBtn" aria-label="Open Navigation Drawer">
+        <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Drawer (Holds all links and actions for <=1024px) -->
+  <div class="offcanvas-backdrop" id="mobileNavBackdrop"></div>
+  <aside class="iron-offcanvas" id="ironMobileOffcanvas">
+    <div class="offcanvas-header">
+      <a href="index.html" class="brand-logo-link">
+        <svg class="brand-logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px;">
+          <polygon points="10,6 38,6 44,18 36,44 18,44 8,18" fill="#191919" stroke="#FFD400" stroke-width="2.5" stroke-linejoin="round"/>
+          <polygon points="24,10 34,10 28,22 36,22 20,40 24,26 16,26" fill="#FFD400"/>
+        </svg>
+        <div class="brand-logo-text">
+          <span class="brand-logo-name" style="font-size: 1.5rem;">IRON<span class="text-electric">VAULT</span></span>
+        </div>
+      </a>
+      <button type="button" class="nav-icon-btn" id="offcanvasCloseBtn" aria-label="Close Drawer">
+        <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link"><span>Home 1</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
+        <li><a href="home-2.html" class="mobile-nav-link"><span>Home 2</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
+        <li><a href="about.html" class="mobile-nav-link"><span>About</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
+        <li><a href="services.html" class="mobile-nav-link"><span>Services</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
+        <li><a href="products.html" class="mobile-nav-link active"><span>Products</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
+        <li><a href="buying-guide.html" class="mobile-nav-link"><span>Buying Guide</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
+        <li><a href="contact.html" class="mobile-nav-link"><span>Contact</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
+      </ul>
+
+      <div class="mobile-nav-controls">
+        <button type="button" class="btn-iron btn-outline-electric w-100 justify-content-start" onclick="IRONVAULT_STORE.toggleSearchModal(true)">
+          <i data-lucide="search" style="width: 18px; height: 18px;"></i>
+          <span>Search Products</span>
+        </button>
+
+        <button type="button" class="btn-iron btn-electric w-100 justify-content-between" onclick="IRONVAULT_STORE.toggleCartDrawer(true)">
+          <span class="d-flex align-items-center gap-2">
+            <i data-lucide="shopping-bag" style="width: 18px; height: 18px;"></i>
+            <span>View Shopping Cart</span>
+          </span>
+          <span class="cart-count-badge" style="position: static; display: none;">0</span>
+        </button>
+
+        <div class="mobile-control-row">
+          <span class="small fw-bold text-muted-custom">THEME MODE</span>
+          <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleTheme()" title="Toggle Theme" aria-label="Toggle Theme">
+            <i data-lucide="moon" class="theme-toggle-icon" style="width: 20px; height: 20px;"></i>
+          </button>
+        </div>
+
+        <div class="mobile-control-row">
+          <span class="small fw-bold text-muted-custom">LANGUAGE DIRECTION</span>
+          <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleDirection()" title="Toggle RTL/LTR" aria-label="Toggle RTL/LTR">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 7H4M16 3l4 4-4 4M4 17h16M8 21l-4-4 4-4"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       PAGE 3 – PRODUCTS CATALOGUE & DYNAMIC FILTERS
+       ========================================================================== -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="section-padding" style="padding-top: calc(var(--nav-height) + 3rem); padding-bottom: 2.5rem; background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="iron-container text-center">
+        <span class="section-tag mb-2">Performance Nutrition Matrix</span>
+        <h1 class="display-font" style="font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1; margin-bottom: 0.75rem;">
+          FUEL YOUR <span class="text-electric">FITNESS GOALS.</span>
+        </h1>
+        <p class="fs-5 text-muted-custom mx-auto mb-0" style="max-width: 640px;">
+          Discover sports nutrition products organized around your training needs. Filter by goal, supplement type, brand, and active dietary requirements.
+        </p>
+      </div>
+    </section>
+
+    <!-- CATALOGUE BODY -->
+    <section class="section-padding">
+      <div class="iron-container">
+        <!-- Active Filter Chips Bar -->
+        <div id="activeFilterChips" class="mb-4 gap-2 flex-wrap align-items-center" style="display: none;"></div>
+
+        <div class="catalog-layout">
+          <!-- LEFT SIDEBAR: DYNAMIC FILTERS -->
+          <aside class="filter-sidebar">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="display-font mb-0" style="font-size: 1.3rem;">FILTERS</h3>
+              <button type="button" class="btn btn-link btn-sm text-electric text-decoration-none p-0" id="resetFiltersBtn">
+                Clear All
+              </button>
+            </div>
+
+            <!-- 1. By Fitness Goal -->
+            <div class="filter-group">
+              <div class="filter-group-title">
+                <span>By Fitness Goal</span>
+                <i data-lucide="target" style="width: 16px;"></i>
+              </div>
+              <div id="filterGoalsContainer"></div>
+            </div>
+
+            <!-- 2. By Product Type -->
+            <div class="filter-group">
+              <div class="filter-group-title">
+                <span>By Product Type</span>
+                <i data-lucide="layers" style="width: 16px;"></i>
+              </div>
+              <div id="filterCategoriesContainer"></div>
+            </div>
+
+            <!-- 3. By Brand -->
+            <div class="filter-group">
+              <div class="filter-group-title">
+                <span>By Brand</span>
+                <i data-lucide="award" style="width: 16px;"></i>
+              </div>
+              <div id="filterBrandsContainer"></div>
+            </div>
+
+            <!-- 4. Price Range Slider -->
+            <div class="filter-group">
+              <div class="filter-group-title">
+                <span>Max Price</span>
+                <span class="text-electric font-monospace" id="priceRangeLabel">$100</span>
+              </div>
+              <input type="range" class="form-range" id="priceRangeSlider" min="20" max="100" step="5" value="100" style="accent-color: var(--color-electric);" />
+              <div class="d-flex justify-content-between small text-muted-custom">
+                <span>$20</span>
+                <span>$100</span>
+              </div>
+            </div>
+          </aside>
+
+          <!-- RIGHT AREA: TOOLBAR & PRODUCT GRID -->
+          <div>
+            <!-- Toolbar -->
+            <div class="catalog-toolbar">
+              <!-- Live Text Search -->
+              <div class="position-relative">
+                <input type="text" id="catalogSearchInput" class="search-input-catalog" placeholder="Filter by product name..." />
+              </div>
+
+              <!-- Counter -->
+              <span class="small fw-bold text-muted-custom" id="catalogResultsCount">Loading products...</span>
+
+              <!-- Sort Dropdown -->
+              <div class="d-flex align-items-center gap-2">
+                <label for="catalogSortSelect" class="small text-muted-custom mb-0 text-nowrap">Sort By:</label>
+                <select id="catalogSortSelect" class="form-select form-select-sm bg-secondary-custom text-white border-secondary" style="border-radius: var(--radius-sm); font-family: var(--font-display); font-weight: 700;">
+                  <option value="featured">Featured / Bestselling</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="name-asc">Name: A to Z</option>
+                  <option value="rating">Highest Rated</option>
+                  <option value="newest">Newest Arrivals</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Dynamic Product Grid (Equal Card Dimensions) -->
+            <div class="row g-4" id="catalogProductsGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER
+       ========================================================================== -->
+  <footer class="iron-footer">
+    <div class="iron-container">
+      <div class="row g-4">
+        <!-- Brand Info -->
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="brand-logo-link mb-3">
+            <svg class="brand-logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="10,6 38,6 44,18 36,44 18,44 8,18" fill="#191919" stroke="#FFD400" stroke-width="2.5" stroke-linejoin="round"/>
+              <polygon points="24,10 34,10 28,22 36,22 20,40 24,26 16,26" fill="#FFD400"/>
+            </svg>
+            <div class="brand-logo-text">
+              <span class="brand-logo-name">IRON<span class="text-electric">VAULT</span></span>
+              <span class="brand-logo-tag">SPORTS NUTRITION</span>
+            </div>
+          </a>
+          <p class="small text-muted-custom mb-4" style="max-width: 320px;">
+            IRONVAULT is a high-performance sports nutrition platform delivering vetted gym supplements for athletes, lifters, and fitness purists.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="X (Twitter)">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-widget-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home 1</a></li>
+            <li><a href="home-2.html" class="footer-nav-link">Home 2</a></li>
+            <li><a href="about.html" class="footer-nav-link">About</a></li>
+            <li><a href="services.html" class="footer-nav-link">Services</a></li>
+            <li><a href="products.html" class="footer-nav-link">Products</a></li>
+            <li><a href="buying-guide.html" class="footer-nav-link">Buying Guide</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Product Categories -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-widget-title">Categories</h4>
+          <ul class="footer-nav-list">
+            <li><a href="products.html?category=Whey%20Protein" class="footer-nav-link">Whey Protein</a></li>
+            <li><a href="products.html?category=Creatine" class="footer-nav-link">Micronized Creatine</a></li>
+            <li><a href="products.html?category=Pre-Workout" class="footer-nav-link">Pre-Workout Stimulants</a></li>
+            <li><a href="products.html?category=BCAA%20%2F%20EAA" class="footer-nav-link">BCAA / EAA Recovery</a></li>
+            <li><a href="products.html?category=Plant%20Protein" class="footer-nav-link">Organic Plant Protein</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info & Demo Disclaimer -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-widget-title">Vault Desk</h4>
+          <p class="small text-muted-custom mb-2">
+            <i data-lucide="map-pin" style="width: 14px;" class="text-electric me-1"></i>
+            742 Olympic Blvd, Athletic District, CA 90015
+          </p>
+          <p class="small text-muted-custom mb-2">
+            <i data-lucide="phone" style="width: 14px;" class="text-electric me-1"></i>
+            +1 (800) 555-IRON (4766)
+          </p>
+          <p class="small text-muted-custom mb-3">
+            <i data-lucide="mail" style="width: 14px;" class="text-electric me-1"></i>
+            support@ironvault-demo.fit
+          </p>
+          <div class="p-2 bg-card-custom rounded border small text-muted-custom" style="border-color: var(--border-color) !important; font-size: 0.75rem;">
+            Demo store interface. All cart and preference states persist via browser localStorage.
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 IRONVAULT Sports Nutrition. All Rights Reserved. Built with Black &amp; Electric Yellow 2026 UI/UX.
+        </div>
+        <div class="d-flex gap-3">
+          <a href="buying-guide.html" class="text-muted-custom small">Label Transparency</a>
+          <a href="contact.html" class="text-muted-custom small">Bulk Enquiries</a>
+          <a href="products.html" class="text-muted-custom small">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       CART DRAWER, SEARCH MODAL, QUICK VIEW & CHECKOUT MODALS
+       ========================================================================== -->
+  <div class="offcanvas-backdrop" id="cartDrawerBackdrop" onclick="IRONVAULT_STORE.toggleCartDrawer(false)"></div>
+  <aside class="iron-cart-drawer" id="ironCartDrawer">
+    <div class="cart-drawer-header">
+      <div class="d-flex align-items-center gap-2">
+        <i data-lucide="shopping-bag" style="width: 22px; color: var(--color-electric);"></i>
+        <h3 class="display-font mb-0">YOUR CART</h3>
+      </div>
+      <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleCartDrawer(false)" aria-label="Close Cart">
+        <i data-lucide="x" style="width: 20px;"></i>
+      </button>
+    </div>
+    <div class="cart-empty-state" id="cartEmptyState" style="display: none;">
+      <i data-lucide="shopping-bag" class="cart-empty-icon"></i>
+      <h4 class="display-font mb-2">YOUR CART IS EMPTY</h4>
+      <p class="text-muted-custom small mb-4">Discover verified supplements to fuel your next workout cycle.</p>
+      <a href="products.html" class="btn-iron btn-electric" onclick="IRONVAULT_STORE.toggleCartDrawer(false)">Explore Products</a>
+    </div>
+    <div class="cart-drawer-body" id="cartDrawerItems"></div>
+    <div class="cart-drawer-footer" id="cartDrawerFooter">
+      <div class="cart-subtotal-row">
+        <span class="cart-subtotal-label">Subtotal:</span>
+        <span class="cart-subtotal-amount">$0.00</span>
+      </div>
+      <small class="text-muted-custom" style="font-size: 0.75rem;">Shipping calculated at checkout. Free shipping on orders over $50.00.</small>
+      <button type="button" class="btn-iron btn-electric w-100" onclick="IRONVAULT_STORE.openCheckoutDemo()">Proceed to Demo Checkout</button>
+    </div>
+  </aside>
+
+  <div class="iron-search-modal" id="ironSearchModal" onclick="if(event.target === this) IRONVAULT_STORE.toggleSearchModal(false)">
+    <div class="search-box-container">
+      <div class="search-input-wrap">
+        <i data-lucide="search" style="width: 28px; height: 28px; color: var(--color-electric);"></i>
+        <input type="text" id="searchModalInput" class="search-modal-input" placeholder="Search protein, creatine, brands, goals..." oninput="IRONVAULT_STORE.handleLiveSearch(this.value)" />
+        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleSearchModal(false)"><i data-lucide="x" style="width: 20px;"></i></button>
+      </div>
+      <div class="search-results-list" id="searchResultsList"></div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-iron" id="quickViewModalContent"></div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="checkoutDemoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content modal-content-iron">
+        <div class="modal-header modal-header-iron">
+          <h3 class="modal-title display-font mb-0">DEMO CHECKOUT</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body modal-body-iron" id="checkoutModalBody">
+          <div id="checkoutSummaryContent"></div>
+          <form onsubmit="IRONVAULT_STORE.submitDemoOrder(event)">
+            <h5 class="form-label-iron small mb-3">Shipping Details (Demo):</h5>
+            <div class="mb-3">
+              <input type="text" class="iron-form-control mb-2" placeholder="Full Name" required value="Elena Rostova" />
+              <input type="email" class="iron-form-control mb-2" placeholder="Email Address" required value="elena.crossfit@example.com" />
+              <input type="text" class="iron-form-control" placeholder="Street Address" required value="520 Olympic Track Blvd" />
+            </div>
+            <div class="p-3 bg-secondary-custom rounded mb-3">
+              <span class="badge-custom badge-pro mb-1">FRONTEND DEMO SIMULATION</span>
+              <p class="small text-muted-custom mb-0">No credit card required. Test our interactive order completion workflow.</p>
+            </div>
+            <button type="submit" id="checkoutSubmitBtn" class="btn-iron btn-electric w-100">Place Demo Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Application Logic -->
+  <script src="js/products-data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/products-page.js"></script>
+</body>
+</html>
+
