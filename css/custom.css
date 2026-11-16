@@ -4,7 +4,7 @@
 
 /* Cybernetic Grid & Ambient Lighting */
 .cyber-grid-bg {
-  background-image: 
+  background-image:
     linear-gradient(rgba(255, 212, 0, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 212, 0, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
@@ -151,7 +151,7 @@
   align-items: center;
   gap: 1.25rem;
   z-index: 3;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
 
 .floating-stat-num {
@@ -185,7 +185,7 @@
   padding: 3rem;
   border-radius: var(--radius-sm);
   position: relative;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 [dir="rtl"] .statement-box {
@@ -261,7 +261,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(16,16,16,0.1) 0%, rgba(16,16,16,0.94) 80%);
+  background: linear-gradient(180deg, rgba(16, 16, 16, 0.1) 0%, rgba(16, 16, 16, 0.94) 80%);
 }
 
 .goal-card-content {
@@ -361,7 +361,7 @@
   left: 0;
   right: 0;
   padding: 1.5rem;
-  background: linear-gradient(0deg, rgba(16,16,16,0.96) 0%, rgba(16,16,16,0.65) 60%, transparent 100%);
+  background: linear-gradient(0deg, rgba(16, 16, 16, 0.96) 0%, rgba(16, 16, 16, 0.65) 60%, transparent 100%);
   font-family: var(--font-display);
   font-size: 1.3rem;
   font-weight: 800;
@@ -667,7 +667,7 @@
   background: var(--bg-card-hover);
   border-color: var(--color-electric);
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5), var(--shadow-electric);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), var(--shadow-electric);
 }
 
 .category-icon-wrap {
@@ -769,7 +769,7 @@
 .service-feature-card:hover {
   border-color: var(--color-electric);
   transform: translateY(-6px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.6), var(--shadow-electric);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), var(--shadow-electric);
 }
 
 .service-feature-card:hover::before {
@@ -781,7 +781,7 @@
   border: 1px solid var(--border-electric);
   border-radius: var(--radius-lg);
   padding: 3rem;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
 
 /* ==========================================================================
@@ -1045,6 +1045,7 @@
    RESPONSIVE BREAKPOINTS (360px, 768px, 1024px, 1366px, 1920px, 2560px, 4K)
    ========================================================================== */
 @media (max-width: 1024px) {
+
   .hero-editorial-grid,
   .hero-market-layout,
   .catalog-layout,
@@ -1052,7 +1053,7 @@
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  
+
   .filter-sidebar {
     position: static;
   }
@@ -1083,12 +1084,12 @@
   .contact-form-box {
     padding: 1.75rem;
   }
-  
+
   .catalog-toolbar {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .search-input-catalog {
     min-width: 100%;
   }

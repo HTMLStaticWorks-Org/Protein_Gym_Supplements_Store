@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark" dir="ltr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact &amp; Athlete Support Desk | IRONVAULT</title>
-  <meta name="description" content="Get in touch with the IRONVAULT sports nutrition team for product availability, brand authenticity inquiries, or bulk gym orders." />
-  
+  <meta name="description"
+    content="Get in touch with the IRONVAULT sports nutrition team for product availability, brand authenticity inquiries, or bulk gym orders." />
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap"
+    rel="stylesheet" />
 
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  
+
   <!-- Core Theme Styles -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/custom.css" />
 </head>
+
 <body>
 
   <!-- ==========================================================================
@@ -34,8 +39,9 @@
       <!-- Brand Logo -->
       <a href="index.html" class="brand-logo-link" aria-label="IRONVAULT Home">
         <svg class="brand-logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="10,6 38,6 44,18 36,44 18,44 8,18" fill="#191919" stroke="#FFD400" stroke-width="2.5" stroke-linejoin="round"/>
-          <polygon points="24,10 34,10 28,22 36,22 20,40 24,26 16,26" fill="#FFD400"/>
+          <polygon points="10,6 38,6 44,18 36,44 18,44 8,18" fill="#191919" stroke="#FFD400" stroke-width="2.5"
+            stroke-linejoin="round" />
+          <polygon points="24,10 34,10 28,22 36,22 20,40 24,26 16,26" fill="#FFD400" />
         </svg>
         <div class="brand-logo-text">
           <span class="brand-logo-name">IRON<span class="text-electric">VAULT</span></span>
@@ -57,19 +63,23 @@
       <!-- Desktop Nav Actions (>1024px) -->
       <div class="desktop-nav-actions">
         <!-- Search Button -->
-        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleSearchModal(true)" title="Search Supplements">
+        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleSearchModal(true)"
+          title="Search Supplements">
           <i data-lucide="search" style="width: 20px; height: 20px;"></i>
         </button>
 
         <!-- Theme Switcher (Square Icon Button) -->
-        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleTheme()" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleTheme()"
+          title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
           <i data-lucide="moon" class="theme-toggle-icon" style="width: 20px; height: 20px;"></i>
         </button>
 
         <!-- RTL/LTR Direction Switcher (Square Icon Button) -->
-        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleDirection()" title="Toggle RTL/LTR" aria-label="Toggle RTL/LTR">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20 7H4M16 3l4 4-4 4M4 17h16M8 21l-4-4 4-4"/>
+        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleDirection()" title="Toggle RTL/LTR"
+          aria-label="Toggle RTL/LTR">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 7H4M16 3l4 4-4 4M4 17h16M8 21l-4-4 4-4" />
           </svg>
         </button>
 
@@ -92,9 +102,11 @@
   <aside class="iron-offcanvas" id="ironMobileOffcanvas">
     <div class="offcanvas-header">
       <a href="index.html" class="brand-logo-link">
-        <svg class="brand-logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px;">
-          <polygon points="10,6 38,6 44,18 36,44 18,44 8,18" fill="#191919" stroke="#FFD400" stroke-width="2.5" stroke-linejoin="round"/>
-          <polygon points="24,10 34,10 28,22 36,22 20,40 24,26 16,26" fill="#FFD400"/>
+        <svg class="brand-logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+          style="width: 32px; height: 32px;">
+          <polygon points="10,6 38,6 44,18 36,44 18,44 8,18" fill="#191919" stroke="#FFD400" stroke-width="2.5"
+            stroke-linejoin="round" />
+          <polygon points="24,10 34,10 28,22 36,22 20,40 24,26 16,26" fill="#FFD400" />
         </svg>
         <div class="brand-logo-text">
           <span class="brand-logo-name" style="font-size: 1.5rem;">IRON<span class="text-electric">VAULT</span></span>
@@ -106,13 +118,20 @@
     </div>
     <div class="offcanvas-body">
       <ul class="mobile-nav-links">
-        <li><a href="index.html" class="mobile-nav-link"><span>Home 1</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
-        <li><a href="home-2.html" class="mobile-nav-link"><span>Home 2</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
-        <li><a href="about.html" class="mobile-nav-link"><span>About</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
-        <li><a href="services.html" class="mobile-nav-link"><span>Services</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
-        <li><a href="products.html" class="mobile-nav-link"><span>Products</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
-        <li><a href="buying-guide.html" class="mobile-nav-link"><span>Buying Guide</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
-        <li><a href="contact.html" class="mobile-nav-link active"><span>Contact</span><i data-lucide="chevron-right" style="width: 18px;"></i></a></li>
+        <li><a href="index.html" class="mobile-nav-link"><span>Home 1</span><i data-lucide="chevron-right"
+              style="width: 18px;"></i></a></li>
+        <li><a href="home-2.html" class="mobile-nav-link"><span>Home 2</span><i data-lucide="chevron-right"
+              style="width: 18px;"></i></a></li>
+        <li><a href="about.html" class="mobile-nav-link"><span>About</span><i data-lucide="chevron-right"
+              style="width: 18px;"></i></a></li>
+        <li><a href="services.html" class="mobile-nav-link"><span>Services</span><i data-lucide="chevron-right"
+              style="width: 18px;"></i></a></li>
+        <li><a href="products.html" class="mobile-nav-link"><span>Products</span><i data-lucide="chevron-right"
+              style="width: 18px;"></i></a></li>
+        <li><a href="buying-guide.html" class="mobile-nav-link"><span>Buying Guide</span><i data-lucide="chevron-right"
+              style="width: 18px;"></i></a></li>
+        <li><a href="contact.html" class="mobile-nav-link active"><span>Contact</span><i data-lucide="chevron-right"
+              style="width: 18px;"></i></a></li>
       </ul>
 
       <div class="mobile-nav-controls">
@@ -152,14 +171,16 @@
        ========================================================================== -->
   <main>
     <!-- HERO SECTION -->
-    <section class="section-padding" style="padding-top: calc(var(--nav-height) + 3.5rem); padding-bottom: 3rem; background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+    <section class="section-padding"
+      style="padding-top: calc(var(--nav-height) + 3.5rem); padding-bottom: 3rem; background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
       <div class="iron-container text-center">
         <span class="section-tag mb-2">Athlete Support &bull; Direct Comms</span>
         <h1 class="display-font" style="font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1; margin-bottom: 1rem;">
           LET'S TALK <span class="text-electric">FITNESS.</span>
         </h1>
         <p class="fs-5 text-muted-custom mx-auto mb-0" style="max-width: 680px;">
-          Need help with products, brands, availability or bulk enquiries? Our team of sports nutrition specialists is ready to assist.
+          Need help with products, brands, availability or bulk enquiries? Our team of sports nutrition specialists is
+          ready to assist.
         </p>
       </div>
     </section>
@@ -227,14 +248,16 @@
           <!-- 5. WhatsApp Contact -->
           <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="400">
             <div class="contact-info-card">
-              <div class="pillar-icon-box" style="background: rgba(37, 211, 102, 0.15); border-color: rgba(37, 211, 102, 0.4); color: #25D366;">
+              <div class="pillar-icon-box"
+                style="background: rgba(37, 211, 102, 0.15); border-color: rgba(37, 211, 102, 0.4); color: #25D366;">
                 <i data-lucide="message-circle" style="width: 22px; height: 22px;"></i>
               </div>
               <div>
                 <span class="small text-electric font-monospace fw-bold">INSTANT WHATSAPP</span>
                 <h4 class="display-font mb-1" style="font-size: 1.25rem;">+1 (310) 555-VAULT</h4>
                 <p class="small text-muted-custom mb-2">Live chat with product advisors for quick stock questions.</p>
-                <a href="https://wa.me/13105558285" target="_blank" rel="noopener" class="btn-iron btn-outline-electric btn-sm-iron">
+                <a href="https://wa.me/13105558285" target="_blank" rel="noopener"
+                  class="btn-iron btn-outline-electric btn-sm-iron">
                   Open WhatsApp Chat &rarr;
                 </a>
               </div>
@@ -261,21 +284,24 @@
                   <!-- Full Name -->
                   <div class="col-md-6">
                     <label for="contactName" class="form-label-iron">Full Name *</label>
-                    <input type="text" id="contactName" class="iron-form-control" placeholder="e.g. Marcus Vance" required />
+                    <input type="text" id="contactName" class="iron-form-control" placeholder="e.g. Marcus Vance"
+                      required />
                     <div class="invalid-feedback small">Please provide your full name.</div>
                   </div>
 
                   <!-- Email Address -->
                   <div class="col-md-6">
                     <label for="contactEmail" class="form-label-iron">Email Address *</label>
-                    <input type="email" id="contactEmail" class="iron-form-control" placeholder="athlete@domain.com" required />
+                    <input type="email" id="contactEmail" class="iron-form-control" placeholder="athlete@domain.com"
+                      required />
                     <div class="invalid-feedback small">Please provide a valid email address.</div>
                   </div>
 
                   <!-- Phone Number -->
                   <div class="col-md-6">
                     <label for="contactPhone" class="form-label-iron">Phone Number *</label>
-                    <input type="tel" id="contactPhone" class="iron-form-control" placeholder="+1 (555) 000-0000" required />
+                    <input type="tel" id="contactPhone" class="iron-form-control" placeholder="+1 (555) 000-0000"
+                      required />
                     <div class="invalid-feedback small">Please provide a valid contact phone number.</div>
                   </div>
 
@@ -295,20 +321,23 @@
                   <!-- Product / Brand Interested In -->
                   <div class="col-12">
                     <label for="contactProduct" class="form-label-iron">Product / Brand Interested In (Optional)</label>
-                    <input type="text" id="contactProduct" class="iron-form-control" placeholder="e.g. Gold Standard Whey, Dymatize ISO100, Creapure" />
+                    <input type="text" id="contactProduct" class="iron-form-control"
+                      placeholder="e.g. Gold Standard Whey, Dymatize ISO100, Creapure" />
                   </div>
 
                   <!-- Subject -->
                   <div class="col-12">
                     <label for="contactSubject" class="form-label-iron">Subject *</label>
-                    <input type="text" id="contactSubject" class="iron-form-control" placeholder="Brief summary of your question" required />
+                    <input type="text" id="contactSubject" class="iron-form-control"
+                      placeholder="Brief summary of your question" required />
                     <div class="invalid-feedback small">Please provide a subject.</div>
                   </div>
 
                   <!-- Message -->
                   <div class="col-12">
                     <label for="contactMessage" class="form-label-iron">Message *</label>
-                    <textarea id="contactMessage" class="iron-form-control" rows="5" placeholder="Detail your specific question or requirements..." required></textarea>
+                    <textarea id="contactMessage" class="iron-form-control" rows="5"
+                      placeholder="Detail your specific question or requirements..." required></textarea>
                     <div class="invalid-feedback small">Please provide at least 10 characters in your message.</div>
                   </div>
 
@@ -334,25 +363,25 @@
               <span class="section-tag mb-2">Physical Experience Center</span>
               <h3 class="display-font mb-2">STORE LOCATION</h3>
               <p class="small text-muted-custom mb-3">
-                Visit our Olympic Boulevard flagship showroom to sample zero-sugar flavour profiles and review batch certificates in person.
+                Visit our Olympic Boulevard flagship showroom to sample zero-sugar flavour profiles and review batch
+                certificates in person.
               </p>
 
               <!-- Stylized Dark Map Embed Placeholder -->
-              <div class="position-relative rounded overflow-hidden mb-3" style="height: 220px; border: 1px solid var(--border-electric); background: #0b0b0b;">
-                <iframe 
-                  title="IRONVAULT Location Map"
-                  src="https://maps.google.com/maps?q=Olympic%20Boulevard,%20Los%20Angeles&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-                  width="100%" 
-                  height="100%" 
-                  style="border:0; filter: grayscale(100%) invert(90%) contrast(1.2);" 
-                  allowfullscreen="" 
-                  loading="lazy">
+              <div class="position-relative rounded overflow-hidden mb-3"
+                style="height: 220px; border: 1px solid var(--border-electric); background: #0b0b0b;">
+                <iframe title="IRONVAULT Location Map"
+                  src="https://maps.google.com/maps?q=Olympic%20Boulevard,%20Los%20Angeles&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  width="100%" height="100%" style="border:0; filter: grayscale(100%) invert(90%) contrast(1.2);"
+                  allowfullscreen="" loading="lazy">
                 </iframe>
               </div>
 
               <div class="d-flex justify-content-between align-items-center">
-                <span class="small text-electric font-monospace"><i data-lucide="navigation" style="width: 14px;"></i> Free Athlete Parking Onsite</span>
-                <a href="https://maps.google.com" target="_blank" rel="noopener" class="small text-muted-custom text-decoration-underline">
+                <span class="small text-electric font-monospace"><i data-lucide="navigation" style="width: 14px;"></i>
+                  Free Athlete Parking Onsite</span>
+                <a href="https://maps.google.com" target="_blank" rel="noopener"
+                  class="small text-muted-custom text-decoration-underline">
                   Get Directions &rarr;
                 </a>
               </div>
@@ -361,18 +390,20 @@
             <!-- Interactive FAQ Accordion Card -->
             <div class="p-4 bg-card-custom rounded border mb-4" style="border-color: var(--border-color) !important;">
               <h4 class="display-font mb-3">FREQUENT ENQUIRIES</h4>
-              
+
               <div class="accordion" id="contactFaqAccordion">
                 <!-- FAQ 1 -->
                 <div class="accordion-item mb-2 rounded overflow-hidden">
                   <h2 class="accordion-header">
-                    <button class="accordion-button shadow-none collapsed py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#contactFaq1" style="font-size: 0.95rem;">
+                    <button class="accordion-button shadow-none collapsed py-2 px-3" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#contactFaq1" style="font-size: 0.95rem;">
                       Do you offer bulk discounts for gyms?
                     </button>
                   </h2>
                   <div id="contactFaq1" class="accordion-collapse collapse" data-bs-parent="#contactFaqAccordion">
                     <div class="accordion-body small text-muted-custom p-3">
-                      Yes! Select "Bulk Order" in the enquiry dropdown. We supply verified cases to certified CrossFit boxes, bodybuilding clubs, and sports training facilities.
+                      Yes! Select "Bulk Order" in the enquiry dropdown. We supply verified cases to certified CrossFit
+                      boxes, bodybuilding clubs, and sports training facilities.
                     </div>
                   </div>
                 </div>
@@ -380,13 +411,15 @@
                 <!-- FAQ 2 -->
                 <div class="accordion-item mb-2 rounded overflow-hidden">
                   <h2 class="accordion-header">
-                    <button class="accordion-button shadow-none collapsed py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#contactFaq2" style="font-size: 0.95rem;">
+                    <button class="accordion-button shadow-none collapsed py-2 px-3" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#contactFaq2" style="font-size: 0.95rem;">
                       How are supplement batches verified?
                     </button>
                   </h2>
                   <div id="contactFaq2" class="accordion-collapse collapse" data-bs-parent="#contactFaqAccordion">
                     <div class="accordion-body small text-muted-custom p-3">
-                      Every batch received at our fulfillment center is cross-referenced with manufacturer lab certificates of analysis (COA) for active label claim verification.
+                      Every batch received at our fulfillment center is cross-referenced with manufacturer lab
+                      certificates of analysis (COA) for active label claim verification.
                     </div>
                   </div>
                 </div>
@@ -394,13 +427,15 @@
                 <!-- FAQ 3 -->
                 <div class="accordion-item mb-2 rounded overflow-hidden">
                   <h2 class="accordion-header">
-                    <button class="accordion-button shadow-none collapsed py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#contactFaq3" style="font-size: 0.95rem;">
+                    <button class="accordion-button shadow-none collapsed py-2 px-3" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#contactFaq3" style="font-size: 0.95rem;">
                       What is the demo dispatch speed?
                     </button>
                   </h2>
                   <div id="contactFaq3" class="accordion-collapse collapse" data-bs-parent="#contactFaqAccordion">
                     <div class="accordion-body small text-muted-custom p-3">
-                      In standard operations, all orders confirmed before 2:00 PM PST are packed and dispatched on the same business day.
+                      In standard operations, all orders confirmed before 2:00 PM PST are packed and dispatched on the
+                      same business day.
                     </div>
                   </div>
                 </div>
@@ -411,29 +446,40 @@
             <div class="p-4 bg-card-custom rounded border" style="border-color: var(--border-color) !important;">
               <h5 class="display-font mb-2">OFFICIAL SOCIAL CHANNELS</h5>
               <p class="small text-muted-custom mb-3">
-                Join our private athlete broadcast for flash drop alerts, certified HPLC lab reports, and live sports nutrition seminars.
+                Join our private athlete broadcast for flash drop alerts, certified HPLC lab reports, and live sports
+                nutrition seminars.
               </p>
               <div class="d-flex gap-2">
-                <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn"
+                  aria-label="Instagram">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                   </svg>
                 </a>
-                <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="YouTube">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn"
+                  aria-label="YouTube">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                    </path>
                     <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
                   </svg>
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="X (Twitter)">
+                <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon-btn"
+                  aria-label="X (Twitter)">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                 </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Facebook">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn"
+                  aria-label="Facebook">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                   </svg>
                 </a>
@@ -455,8 +501,9 @@
         <div class="col-lg-4 col-md-6">
           <a href="index.html" class="brand-logo-link mb-3">
             <svg class="brand-logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="10,6 38,6 44,18 36,44 18,44 8,18" fill="#191919" stroke="#FFD400" stroke-width="2.5" stroke-linejoin="round"/>
-              <polygon points="24,10 34,10 28,22 36,22 20,40 24,26 16,26" fill="#FFD400"/>
+              <polygon points="10,6 38,6 44,18 36,44 18,44 8,18" fill="#191919" stroke="#FFD400" stroke-width="2.5"
+                stroke-linejoin="round" />
+              <polygon points="24,10 34,10 28,22 36,22 20,40 24,26 16,26" fill="#FFD400" />
             </svg>
             <div class="brand-logo-text">
               <span class="brand-logo-name">IRON<span class="text-electric">VAULT</span></span>
@@ -464,30 +511,39 @@
             </div>
           </a>
           <p class="small text-muted-custom mb-4" style="max-width: 320px;">
-            IRONVAULT is a high-performance sports nutrition platform delivering vetted gym supplements for athletes, lifters, and fitness purists.
+            IRONVAULT is a high-performance sports nutrition platform delivering vetted gym supplements for athletes,
+            lifters, and fitness purists.
           </p>
           <div class="d-flex gap-2">
-            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn"
+              aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </a>
             <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="YouTube">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
                 <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
               </svg>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="X (Twitter)">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon-btn"
+              aria-label="X (Twitter)">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
                 <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
               </svg>
             </a>
             <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Facebook">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
               </svg>
             </a>
@@ -535,7 +591,8 @@
             <i data-lucide="mail" style="width: 14px;" class="text-electric me-1"></i>
             support@ironvault-demo.fit
           </p>
-          <div class="p-2 bg-card-custom rounded border small text-muted-custom" style="border-color: var(--border-color) !important; font-size: 0.75rem;">
+          <div class="p-2 bg-card-custom rounded border small text-muted-custom"
+            style="border-color: var(--border-color) !important; font-size: 0.75rem;">
             Demo store interface. All cart and preference states persist via browser localStorage.
           </div>
         </div>
@@ -544,7 +601,8 @@
       <!-- Footer Bottom -->
       <div class="footer-bottom">
         <div>
-          &copy; 2026 IRONVAULT Sports Nutrition. All Rights Reserved. Built with Black &amp; Electric Yellow 2026 UI/UX.
+          &copy; 2026 IRONVAULT Sports Nutrition. All Rights Reserved. Built with Black &amp; Electric Yellow 2026
+          UI/UX.
         </div>
         <div class="d-flex gap-3">
           <a href="buying-guide.html" class="text-muted-custom small">Label Transparency</a>
@@ -565,7 +623,8 @@
         <i data-lucide="shopping-bag" style="width: 22px; color: var(--color-electric);"></i>
         <h3 class="display-font mb-0">YOUR CART</h3>
       </div>
-      <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleCartDrawer(false)" aria-label="Close Cart">
+      <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleCartDrawer(false)"
+        aria-label="Close Cart">
         <i data-lucide="x" style="width: 20px;"></i>
       </button>
     </div>
@@ -573,7 +632,8 @@
       <i data-lucide="shopping-bag" class="cart-empty-icon"></i>
       <h4 class="display-font mb-2">YOUR CART IS EMPTY</h4>
       <p class="text-muted-custom small mb-4">Discover verified supplements to fuel your next workout cycle.</p>
-      <a href="products.html" class="btn-iron btn-electric" onclick="IRONVAULT_STORE.toggleCartDrawer(false)">Explore Products</a>
+      <a href="products.html" class="btn-iron btn-electric" onclick="IRONVAULT_STORE.toggleCartDrawer(false)">Explore
+        Products</a>
     </div>
     <div class="cart-drawer-body" id="cartDrawerItems"></div>
     <div class="cart-drawer-footer" id="cartDrawerFooter">
@@ -581,17 +641,23 @@
         <span class="cart-subtotal-label">Subtotal:</span>
         <span class="cart-subtotal-amount">$0.00</span>
       </div>
-      <small class="text-muted-custom" style="font-size: 0.75rem;">Shipping calculated at checkout. Free shipping on orders over $50.00.</small>
-      <button type="button" class="btn-iron btn-electric w-100" onclick="IRONVAULT_STORE.openCheckoutDemo()">Proceed to Demo Checkout</button>
+      <small class="text-muted-custom" style="font-size: 0.75rem;">Shipping calculated at checkout. Free shipping on
+        orders over $50.00.</small>
+      <button type="button" class="btn-iron btn-electric w-100" onclick="IRONVAULT_STORE.openCheckoutDemo()">Proceed to
+        Demo Checkout</button>
     </div>
   </aside>
 
-  <div class="iron-search-modal" id="ironSearchModal" onclick="if(event.target === this) IRONVAULT_STORE.toggleSearchModal(false)">
+  <div class="iron-search-modal" id="ironSearchModal"
+    onclick="if(event.target === this) IRONVAULT_STORE.toggleSearchModal(false)">
     <div class="search-box-container">
       <div class="search-input-wrap">
         <i data-lucide="search" style="width: 28px; height: 28px; color: var(--color-electric);"></i>
-        <input type="text" id="searchModalInput" class="search-modal-input" placeholder="Search protein, creatine, brands, goals..." oninput="IRONVAULT_STORE.handleLiveSearch(this.value)" />
-        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleSearchModal(false)"><i data-lucide="x" style="width: 20px;"></i></button>
+        <input type="text" id="searchModalInput" class="search-modal-input"
+          placeholder="Search protein, creatine, brands, goals..."
+          oninput="IRONVAULT_STORE.handleLiveSearch(this.value)" />
+        <button type="button" class="nav-icon-btn" onclick="IRONVAULT_STORE.toggleSearchModal(false)"><i data-lucide="x"
+            style="width: 20px;"></i></button>
       </div>
       <div class="search-results-list" id="searchResultsList"></div>
     </div>
@@ -616,12 +682,15 @@
             <h5 class="form-label-iron small mb-3">Shipping Details (Demo):</h5>
             <div class="mb-3">
               <input type="text" class="iron-form-control mb-2" placeholder="Full Name" required value="Sarah Chen" />
-              <input type="email" class="iron-form-control mb-2" placeholder="Email Address" required value="sarah.chen@example.com" />
-              <input type="text" class="iron-form-control" placeholder="Street Address" required value="220 Performance Track" />
+              <input type="email" class="iron-form-control mb-2" placeholder="Email Address" required
+                value="sarah.chen@example.com" />
+              <input type="text" class="iron-form-control" placeholder="Street Address" required
+                value="220 Performance Track" />
             </div>
             <div class="p-3 bg-secondary-custom rounded mb-3">
               <span class="badge-custom badge-pro mb-1">FRONTEND DEMO SIMULATION</span>
-              <p class="small text-muted-custom mb-0">No actual charge is initiated. Orders simulate frontend localStorage clearing.</p>
+              <p class="small text-muted-custom mb-0">No actual charge is initiated. Orders simulate frontend
+                localStorage clearing.</p>
             </div>
             <button type="submit" id="checkoutSubmitBtn" class="btn-iron btn-electric w-100">Place Demo Order</button>
           </form>
@@ -632,8 +701,9 @@
 
   <!-- Back to Top Button -->
   <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to Top" title="Back to Top">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M18 15l-6-6-6 6"/>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6" />
     </svg>
   </button>
 
@@ -649,5 +719,5 @@
   <script src="js/main.js"></script>
   <script src="js/contact-page.js"></script>
 </body>
-</html>
 
+</html>
